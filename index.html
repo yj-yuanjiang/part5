@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>  &#127916; Movie App  &#127909;</h1>
+
+  <!-- Section 1: Search Movie -->
+  <section id="search-movie">
+    <h2>Search Movie</h2>
+    <!-- Input for searching movie by ID -->
+    <input type="number" id="searchId" placeholder="Search by Movie ID">
+    <button onclick="searchMovieById()">Search</button>
+    
+    <!-- Input for searching movie by Title -->
+    <input type="text" id="searchTitle" placeholder="Search by Title" oninput="searchMovieByTitle()">
+    <ul id="searchResult"></ul>
+  </section>
+
+  <!-- Section 2: Display Movie List -->
+  <section id="display-movie">
+    <h2>Movie List</h2>
+    <!-- Buttons to manipulate movie list -->
+    <button onclick="refreshMovieList()">Refresh</button>
+    <button onclick="sortAZ()">Sort A-Z</button>
+    <button onclick="sortZA()">Sort Z-A</button>
+    <button onclick="sortByRating()">Best Movies</button>
+    <ul id="movieList"></ul>
+  </section>
+
+  <!-- Section 3: Add Movie -->
+  <section id="add-movie">
+    <h2>Add Movie</h2>
+    <!-- Inputs for new movie details -->
+    <input type="number" id="movieId" placeholder="Movie ID">
+    <input type="text" id="movieTitle" placeholder="Title">
+    <input type="number" id="movieYear" placeholder="Year">
+    <input type="number" step="0.1" id="movieRating" placeholder="Rating">
+    <button onclick="addMovie()">Submit</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <p>Copyright &copy; <span id="date"></span> Movie App</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="movie-app.js"></script>
+</body>
+</html>
