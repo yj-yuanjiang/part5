@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 // Define a Movie class with ID, title, year, and rating
 class Movie {
   constructor(id, title, year, rating) {
@@ -102,8 +103,8 @@ function searchMovieById() {
   const result = binarySearchMovieById(sortedMovies, id);
 
   const item = document.createElement("li");
-  item.textContent = result
-    ? `${result.id} - ${result.title} (${result.year}) Rating: ${result.rating}`
+  item.textContent = result ?
+    `${result.id} - ${result.title} (${result.year}) Rating: ${result.rating}`
     : "0 result";
   resultList.appendChild(item);
 }
