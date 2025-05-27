@@ -1,55 +1,133 @@
 /* Basic layout styling */
 body {
   font-family: Arial, sans-serif;
-  margin: 20px;
-  background-color: #f4f6f8;
-  color: #333;
+  margin: 25px;
+  background: linear-gradient(135deg,
+    rgba(106, 78, 163, 0.5) 0%,
+    rgba(200, 157, 240, 0.4) 25%,
+    rgba(255, 216, 155, 0.35) 50%,
+    rgba(247, 232, 166, 0.3) 75%,
+    rgba(106, 78, 163, 0.5) 100%
+  );
+  color: #fff;
+  background-attachment: fixed;
 }
 
+/* Main title */
 h1 {
   text-align: center;
   color: #444;
+  font-size: 52px;
 }
 
-section {
-  background-color: #e7f0e6;
+/* Section: Search Movie */
+#search-movie {
+  background-color: #ffefef;
+  border: 2px solid #ff6b6b;
   padding: 20px;
   margin: 20px auto;
   max-width: 1024px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,107,107,0.3);
 }
 
+/* Section: Display Movie */
+#display-movie {
+  background-color: #e0f7fa;
+  border: 2px solid #00bcd4;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1024px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,188,212,0.3);
+}
+
+/* Section: Add Movie */
+#add-movie {
+  background-color: #fff3e0;
+  border: 2px solid #ff9800;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1024px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,152,0,0.3);
+}
+
+section h2 {
+  color: #333;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+/* Input field styles */
 input {
   display: block;
   margin: 10px 0;
   padding: 10px;
   width: 100%;
   box-sizing: border-box;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
 }
 
+input:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+/* Button styles */
 button {
   margin: 5px 5px 15px 0;
   padding: 10px 15px;
-  background-color: #0077cc;
-  color: white;
+  background-color: #7e57c2;
+  color: #faf9f9;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #005fa3;
+  background-color: #f7c08a; 
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Movie list styling */
+#movieList li,
+#searchResult li {
+  color: #000;
+}
+
+#movieList li:hover {
+  background-color: #c3d9f5 !important;
+  color: #000;
+  cursor: pointer;
 }
 
 ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 li {
   padding: 8px;
   border-bottom: 1px solid #ddd;
+  font-weight: 500;
+}
+
+/* Striped list background */
+#movieList li:nth-child(odd),
+#searchResult li:nth-child(odd) {
+  background-color: #fff;
+}
+
+#movieList li:nth-child(even),
+#searchResult li:nth-child(even) {
+  background-color: #dbdcdc;
 }
 
 /* Footer styling */
@@ -58,20 +136,28 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  background-color: #f0f0f0;
-  padding: 10px 0;
+  background-color: #151414;
+  padding: 15px 0;
   text-align: center;
-  color: #555;
-  font-size: 10px;
+  color: #f1f1f1;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 -3px 10px rgba(45, 45, 45, 0.4);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Zebra striping: odd = white, even = light grey */
-#movieList li:nth-child(odd),
-#searchResult li:nth-child(odd) {
-  background-color: #F3F7F9;
+/* Footer text */
+footer p {
+  margin: 5px 0;
 }
 
-#movieList li:nth-child(even),
-#searchResult li:nth-child(even) {
-  background-color: #f0f0f0;
+/* Remove underline from footer links */
+footer a {
+  text-decoration: none;
+}
+
+/* Increase icon size and spacing */
+footer i {
+  font-size: 24px; /* or use fa-2x class in HTML */
+  margin: 0 12px;
 }
